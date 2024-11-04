@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finite Automata Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <aside id="controls">
+      <h2>Controls</h2>
+      <div class="control-group">
+        <button onclick="addState()">Add State</button>
+        <button onclick="removeStateByName()">Remove State</button>
+      </div>
+      <div class="control-group">
+        <button onclick="setStartState()">Set Start State</button>
+        <button onclick="setAcceptState()">Set Accept State</button>
+      </div>
+      <div class="control-group">
+        <input type="text" id="fromState" placeholder="From State">
+        <input type="text" id="toState" placeholder="To State">
+        <input type="text" id="transitionSymbol" placeholder="Transition Symbol">
+        <button onclick="addTransition()">Add Transition</button>
+      </div>
+      <div class="control-group">
+        <input type="text" id="inputString" placeholder="Enter string to test">
+        <button onclick="testString()">Test String</button>
+      </div>
+      <div class="control-group">
+        <button onclick="saveDiagramAsImage()">Save Diagram</button>
+      </div>
+      <p id="resultMessage"></p>
+    </aside>
+    <main id="canvas">
+      <h2>Automaton Visualization</h2>
+      <!-- Canvas area for D3.js visualizations -->
+    </main>
+  </div>
+  <script src="automaton.js"></script>
+  <script src="visualizer.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
